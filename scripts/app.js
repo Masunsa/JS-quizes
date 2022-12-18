@@ -588,5 +588,5 @@ function Click(index)
 	}
 
 	//Ждём секунду и обновляем тест
-	setTimeout(Update, 1000);
+	setTimeout(Update, 2000);
 }
