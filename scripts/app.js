@@ -61,8 +61,8 @@ class Quiz
 	Next()
 	{
 		this.current++;
-		
-		if(this.current >= this.questions.length) 
+
+		if(this.current >= this.questions.length)
 		{
 			this.End();
 		}
@@ -79,35 +79,35 @@ class Quiz
 			}
 		}
 	}
-} 
+}
 
 //Класс, представляющий вопрос
-class Question 
+class Question
 {
 	constructor(text, answers)
 	{
-		this.text = text; 
-		this.answers = answers; 
+		this.text = text;
+		this.answers = answers;
 	}
 
-	Click(index) 
+	Click(index)
 	{
-		return this.answers[index].value; 
+		return this.answers[index].value;
 	}
 }
 
 //Класс, представляющий ответ
-class Answer 
+class Answer
 {
-	constructor(text, value) 
+	constructor(text, value)
 	{
-		this.text = text; 
-		this.value = value; 
+		this.text = text;
+		this.value = value;
 	}
 }
 
 //Класс, представляющий результат
-class Result 
+class Result
 {
 	constructor(text, value)
 	{
@@ -122,7 +122,7 @@ class Result
 		{
 			return true;
 		}
-		else 
+		else
 		{
 			return false;
 		}
@@ -130,64 +130,370 @@ class Result
 }
 
 //Массив с результатами
-const results = 
+const results =
 [
-	new Result("Вам многому нужно научиться", 0),
-	new Result("Вы уже неплохо разбираетесь", 2),
-	new Result("Ваш уровень выше среднего", 4),
-	new Result("Вы в совершенстве знаете тему", 6)
+	new Result("Пора в школу на урок географии", 0),
+	new Result("Учитель будет тобой доволен", 30),
+	new Result("Нормально. Но надо еще поучиться", 40),
+	new Result("Идеально. Ты гуру!!!", 43)
 ];
 
 //Массив с вопросами
-const questions = 
+const questions =
 [
-	new Question("2 + 2 = ", 
+	new Question("Столица Испании ",
 	[
-		new Answer("2", 0),
-		new Answer("3", 0),
-		new Answer("4", 1),
-		new Answer("0", 0)
+		new Answer("Вена", 0),
+		new Answer("Осло", 0),
+		new Answer("Мадрид", 1),
+		new Answer("Белград", 0)
 	]),
 
-	new Question("2 * 2 = ", 
+	new Question("Столица Беларуси ",
 	[
-		new Answer("2", 0),
-		new Answer("3", 0),
-		new Answer("4", 1),
-		new Answer("0", 0)
+		new Answer("Любляна", 0),
+		new Answer("Рига", 0),
+		new Answer("Минск", 1),
+		new Answer("Братислава", 0)
 	]),
 
-	new Question("2 / 2 = ", 
+	new Question("Столица Греции ",
 	[
-		new Answer("0", 0),
-		new Answer("1", 1),
-		new Answer("2", 0),
-		new Answer("3", 0)
+		new Answer("Салоники", 0),
+		new Answer("Афины", 1),
+		new Answer("Мальта", 0),
+		new Answer("Берлин", 0)
 	]),
 
-	new Question("2 - 2 = ", 
+	new Question("Столица Хорватии ",
 	[
-		new Answer("0", 1),
-		new Answer("1", 0),
-		new Answer("2", 0),
-		new Answer("3", 0)
+		new Answer("Загреб", 1),
+		new Answer("Приштина", 0),
+		new Answer("Бухарест", 0),
+		new Answer("Будапешт", 0)
 	]),
 
-	new Question("2 + 2 * 2 = ", 
+	new Question("Столица Черногории ",
 	[
-		new Answer("4", 0),
-		new Answer("6", 1),
-		new Answer("8", 0),
-		new Answer("10", 0)
+		new Answer("Сараево", 0),
+		new Answer("Подгорица", 1),
+		new Answer("Тирана", 0),
+		new Answer("Вадуц", 0)
 	]),
 
-	new Question("2 + 2 / 2 = ", 
+	new Question("Столица Лихтенштейна ",
 	[
-		new Answer("1", 0),
-		new Answer("2", 0),
-		new Answer("3", 1),
-		new Answer("4", 0)
-	])
+		new Answer("Монако", 0),
+		new Answer("Берн", 0),
+		new Answer("Вадуц", 1),
+		new Answer("Валетта", 0)
+	]),
+
+	new Question("Столица Монако ",
+	[
+		new Answer("Солнце", 0),
+		new Answer("Лондон", 0),
+		new Answer("Монако", 1),
+		new Answer("Брест", 0)
+	]),
+
+	new Question("Столица Нидерландов ",
+	[
+		new Answer("Роттердам", 0),
+		new Answer("Глазго", 0),
+		new Answer("Амстердам", 1),
+		new Answer("Утрехт", 0)
+	]),
+
+	new Question("Столица Франции ",
+	[
+		new Answer("Лиль", 0),
+		new Answer("Париж", 1),
+		new Answer("Нант", 0),
+		new Answer("Монпелье", 0)
+	]),
+
+	new Question("Столица Швейцарии ",
+	[
+		new Answer("Берн", 1),
+		new Answer("Базель", 0),
+		new Answer("Лозанна", 0),
+		new Answer("Брюгге", 0)
+	]),
+
+	new Question("Столица Венгрии ",
+	[
+		new Answer("Дебрецен", 0),
+		new Answer("Будапешт", 1),
+		new Answer("Дьер", 0),
+		new Answer("Кечкемет", 0)
+	]),
+
+	new Question("Столица Молдавии ",
+	[
+		new Answer("Тирасполь", 0),
+		new Answer("Кахул", 0),
+		new Answer("Бельцы", 0),
+		new Answer("Кишинев", 1)
+	]),
+
+	new Question("Столица России ",
+	[
+		new Answer("Москва", 1),
+		new Answer("Казань", 0),
+		new Answer("Новосибирск", 0),
+		new Answer("Нижний Тагил", 0)
+	]),
+
+	new Question("Столица Мальты ",
+	[
+		new Answer("Мальта", 0),
+		new Answer("Рабат", 0),
+		new Answer("Валетта", 1),
+		new Answer("Биркиркара", 0)
+	]),
+
+	new Question("Столица Исландии ",
+	[
+		new Answer("Акурейри", 0),
+		new Answer("Рейкьявик", 1),
+		new Answer("Вадуц", 0),
+		new Answer("Валетта", 0)
+	]),
+
+	new Question("Столица Норвегии ",
+	[
+		new Answer("Копенгаген", 0),
+		new Answer("Осло", 1),
+		new Answer("Тромсе", 0),
+		new Answer("Лиллехаммер", 0)
+	]),
+
+	new Question("Столица Латвии ",
+	[
+		new Answer("Рига", 1),
+		new Answer("Вильнюс", 0),
+		new Answer("Таллин", 0),
+		new Answer("Юрмала", 0)
+	]),
+
+	new Question("Столица Германии ",
+	[
+		new Answer("Франкфурт", 0),
+		new Answer("Мюнхен", 0),
+		new Answer("Берлин", 1),
+		new Answer("Ганновер", 0)
+	]),
+
+	new Question("Столица Ирландии ",
+	[
+		new Answer("Корк", 0),
+		new Answer("Лимерик", 0),
+		new Answer("Манчестер", 0),
+		new Answer("Дублин", 1)
+	]),
+
+	new Question("Столица Словакии ",
+	[
+		new Answer("Братислава", 1),
+		new Answer("Кошице", 0),
+		new Answer("Любляна", 0),
+		new Answer("Жилина", 0)
+	]),
+
+	new Question("Столица Украины ",
+	[
+		new Answer("Монако", 0),
+		new Answer("Нью Йорк", 0),
+		new Answer("Киев", 1),
+		new Answer("Львов", 0)
+	]),
+
+	new Question("Столица Люксембурга ",
+	[
+		new Answer("Монако", 0),
+		new Answer("Люксембург", 1),
+		new Answer("Варкен", 0),
+		new Answer("Ремих", 0)
+	]),
+
+	new Question("Столица Литвы ",
+	[
+		new Answer("Каунас", 0),
+		new Answer("Клайпеда", 0),
+		new Answer("Рига", 0),
+		new Answer("Вильнюс", 1)
+	]),
+
+	new Question("Столица Финляндии ",
+	[
+		new Answer("Турку", 0),
+		new Answer("Лахти", 0),
+		new Answer("Стокгольм", 0),
+		new Answer("Хельсинки", 1)
+	]),
+
+	new Question("Столица Ватикана ",
+	[
+		new Answer("Ватикан", 1),
+		new Answer("Берн", 0),
+		new Answer("Осло", 0),
+		new Answer("Прага", 0)
+	]),
+
+	new Question("Столица Боснии и Герцеговины ",
+	[
+		new Answer("Мостар", 0),
+		new Answer("Сараево", 1),
+		new Answer("София", 0),
+		new Answer("Приштина", 0)
+	]),
+
+	new Question("Столица Андорры ",
+	[
+		new Answer("Андорра", 0),
+		new Answer("Ла-Масана", 0),
+		new Answer("Андорра-ла-Велья", 1),
+		new Answer("Санта-Колома", 0)
+	]),
+
+	new Question("Столица Албании ",
+	[
+		new Answer("Белград", 0),
+		new Answer("Тирана", 1),
+		new Answer("Саранда", 0),
+		new Answer("Берат", 0)
+	]),
+
+	new Question("Столица Португалии ",
+	[
+		new Answer("Лиссабон", 1),
+		new Answer("Порту", 0),
+		new Answer("Брага", 0),
+		new Answer("Авейру", 0)
+	]),
+
+	new Question("Столица Сан-Марино ",
+	[
+		new Answer("Ватикан", 0),
+		new Answer("Рим", 0),
+		new Answer("Таллин", 0),
+		new Answer("Сан-Марино", 1)
+	]),
+
+	new Question("Столица Чехии ",
+	[
+		new Answer("Брага", 0),
+		new Answer("Прага", 1),
+		new Answer("Бухарест", 0),
+		new Answer("Скопье", 0)
+	]),
+
+	new Question("Столица Румынии ",
+	[
+		new Answer("Бухарест", 1),
+		new Answer("Будапешт", 0),
+		new Answer("Варшава", 0),
+		new Answer("Любляна", 0)
+	]),
+
+	new Question("Столица Польши ",
+	[
+		new Answer("Краков", 0),
+		new Answer("Познань", 0),
+		new Answer("Вроцлав", 0),
+		new Answer("Варшава", 1)
+	]),
+
+	new Question("Столица Болгарии ",
+	[
+		new Answer("Варна", 0),
+		new Answer("София", 1),
+		new Answer("Пловдив", 0),
+		new Answer("Бургас", 0)
+	]),
+
+	new Question("Столица Великобритании ",
+	[
+		new Answer("Манчестер", 0),
+		new Answer("Дублин", 0),
+		new Answer("Лондон", 1),
+		new Answer("Ливерпуль", 0)
+	]),
+
+	new Question("Столица Бельгии ",
+	[
+		new Answer("Брюгге", 0),
+		new Answer("Брюссель", 1),
+		new Answer("Нант", 0),
+		new Answer("Гент", 0)
+	]),
+
+	new Question("Столица Австрии ",
+	[
+		new Answer("Вена", 1),
+		new Answer("Клагенфурт", 0),
+		new Answer("Инсбрук", 0),
+		new Answer("Зальцбург", 0)
+	]),
+
+	new Question("Столица Дании ",
+	[
+		new Answer("Рейкьявик", 0),
+		new Answer("Ольборг", 0),
+		new Answer("Оденсе", 0),
+		new Answer("Копенгаген", 1)
+	]),
+
+	new Question("Столица Швеции ",
+	[
+		new Answer("Гетеборг", 0),
+		new Answer("Мальме", 0),
+		new Answer("Стокгольм", 1),
+		new Answer("Хельсинборг", 0)
+	]),
+
+	new Question("Столица Италии ",
+	[
+		new Answer("Милан", 0),
+		new Answer("Рим", 1),
+		new Answer("Наполи", 0),
+		new Answer("Турин", 0)
+	]),
+
+	new Question("Столица Македонии ",
+	[
+		new Answer("Скопье", 1),
+		new Answer("Тирана", 0),
+		new Answer("Загреб", 0),
+		new Answer("Подгорица", 0)
+	]),
+
+	new Question("Столица Сербии ",
+	[
+		new Answer("Кралево", 0),
+		new Answer("Белград", 1),
+		new Answer("Бухарест", 0),
+		new Answer("Братислава", 0)
+	]),
+
+	new Question("Столица Словении ",
+	[
+		new Answer("Марибор", 0),
+		new Answer("Копер", 0),
+		new Answer("Сараево", 0),
+		new Answer("Любляна", 1)
+	]),
+
+	new Question("Столица Эстонии ",
+	[
+		new Answer("Нарва", 0),
+		new Answer("Пярну", 0),
+		new Answer("Таллин", 1),
+		new Answer("Вильнюс", 0)
+	]),
+
+
 ];
 
 //Сам тест
@@ -199,7 +505,7 @@ Update();
 function Update()
 {
 	//Проверяем, есть ли ещё вопросы
-	if(quiz.current < quiz.questions.length) 
+	if(quiz.current < quiz.questions.length)
 	{
 		//Если есть, меняем вопрос в заголовке
 		headElem.innerHTML = quiz.questions[quiz.current].text;
@@ -219,7 +525,7 @@ function Update()
 
 			buttonsElem.appendChild(btn);
 		}
-		
+
 		//Выводим номер текущего вопроса
 		pagesElem.innerHTML = (quiz.current + 1) + " / " + quiz.questions.length;
 
@@ -248,7 +554,7 @@ function Init()
 	}
 }
 
-function Click(index) 
+function Click(index)
 {
 	//Получаем номер правильного ответа
 	let correct = quiz.Click(index);
@@ -270,10 +576,10 @@ function Click(index)
 			btns[correct].className = "button button_correct";
 		}
 
-		if(index != correct) 
+		if(index != correct)
 		{
 			btns[index].className = "button button_wrong";
-		} 
+		}
 	}
 	else
 	{
