@@ -141,18 +141,60 @@ const results =
 //Массив с вопросами
 const questions =
 [
+
+
+new Question("Столица Нигерии ",
+	[
+		new Answer("Лагос", 0),
+		new Answer("Кано", 0),
+		new Answer("Абуджа", 1),
+		new Answer("Бенин-Сити", 0)
+	]),
+
+	new Question("Столица Эфиопии ",
+	[
+		new Answer("Назрет", 0),
+		new Answer("Аддис-Абеба", 1),
+		new Answer("Гондэр", 0),
+		new Answer("Бахр-Дар", 0)
+	]),
+
+	new Question("Столица Ганы ",
+	[
+		new Answer("Аккра", 1),
+		new Answer("Кумаси", 0),
+		new Answer("Тамале", 0),
+		new Answer("Болгатанга", 0)
+	]),
+
+	new Question("Столица Алжира ",
+	[
+		new Answer("Оран", 0),
+		new Answer("Константина", 0),
+		new Answer("Джельфа", 0),
+		new Answer("Алжир", 1)
+	]),
+
 	new Question("Столица Испании ",
 	[
-		new Answer("Вена", 0),
-		new Answer("Осло", 0),
+		new Answer("Лиссабон", 0),
+		new Answer("Барселона", 0),
 		new Answer("Мадрид", 1),
-		new Answer("Белград", 0)
+		new Answer("Валенсия", 0)
+	]),
+
+	new Question("Столица ОАЭ ",
+	[
+		new Answer("Шарджа", 0),
+		new Answer("Эль-Айн", 0),
+		new Answer("Дубай", 0),
+		new Answer("Абу-Даби", 1)
 	]),
 
 	new Question("Столица Беларуси ",
 	[
-		new Answer("Любляна", 0),
-		new Answer("Рига", 0),
+		new Answer("Брест", 0),
+		new Answer("Кельн", 0),
 		new Answer("Минск", 1),
 		new Answer("Братислава", 0)
 	]),
@@ -161,8 +203,8 @@ const questions =
 	[
 		new Answer("Салоники", 0),
 		new Answer("Афины", 1),
-		new Answer("Мальта", 0),
-		new Answer("Берлин", 0)
+		new Answer("Дрезден", 0),
+		new Answer("Лимассол", 0)
 	]),
 
 	new Question("Столица Хорватии ",
@@ -171,6 +213,46 @@ const questions =
 		new Answer("Приштина", 0),
 		new Answer("Бухарест", 0),
 		new Answer("Будапешт", 0)
+	]),
+
+	new Question("Столица Казахстана ",
+	[
+		new Answer("Нур-Султан", 0),
+		new Answer("Астана", 1),
+		new Answer("Экибастуз", 0),
+		new Answer("Алма-Ата", 0)
+	]),
+
+new Question("Столица Парагвая ",
+	[
+		new Answer("Ла-Паз", 0),
+		new Answer("Кордоба", 0),
+		new Answer("Асунсьон", 1),
+		new Answer("Мендоса", 0)
+	]),
+
+new Question("Столица Туркменистана ",
+	[
+		new Answer("Ашхабад", 1),
+		new Answer("Туркменбашы", 0),
+		new Answer("Тукменабад", 0),
+		new Answer("Полторацк", 0)
+	]),
+
+new Question("Столица Ирака ",
+	[
+		new Answer("Эрбиль", 0),
+		new Answer("Киркук", 0),
+		new Answer("Багдад", 1),
+		new Answer("Басра", 0)
+	]),
+
+new Question("Столица Азербайджана ",
+	[
+		new Answer("Шеки", 0),
+		new Answer("Агдаш", 0),
+		new Answer("Сабирабад", 0),
+		new Answer("Баку", 1)
 	]),
 
 	new Question("Столица Черногории ",
@@ -229,6 +311,22 @@ const questions =
 		new Answer("Кечкемет", 0)
 	]),
 
+	new Question("Столица Мали ",
+	[
+		new Answer("Сикасо", 0),
+		new Answer("Бамако", 1),
+		new Answer("Каес", 0),
+		new Answer("Мопти", 0)
+	]),
+
+new Question("Столица Центральноафриканской Республики ",
+	[
+		new Answer("Бимбо", 0),
+		new Answer("Мбаики", 0),
+		new Answer("Берберати", 0),
+		new Answer("Банги", 1)
+	]),
+
 	new Question("Столица Молдавии ",
 	[
 		new Answer("Тирасполь", 0),
@@ -269,6 +367,22 @@ const questions =
 		new Answer("Лиллехаммер", 0)
 	]),
 
+	new Question("Столица Таиланда ",
+	[
+		new Answer("Таиланд", 0),
+		new Answer("Бангкок", 1),
+		new Answer("Паттайя", 0),
+		new Answer("Пхукет", 0)
+	]),
+
+new Question("Столица Брунея ",
+	[
+		new Answer("Куала Белайт", 0),
+		new Answer("Сериа", 0),
+		new Answer("Бруней", 0),
+		new Answer("Бандар-Сери-Бегаван", 1)
+	]),
+
 	new Question("Столица Латвии ",
 	[
 		new Answer("Рига", 1),
@@ -293,12 +407,78 @@ const questions =
 		new Answer("Дублин", 1)
 	]),
 
+	new Question("Столица Гамбии ",
+	[
+		new Answer("Брикама", 0),
+		new Answer("Бакау", 0),
+		new Answer("Банжул", 1),
+		new Answer("Ламин", 0)
+	]),
+
 	new Question("Столица Словакии ",
 	[
 		new Answer("Братислава", 1),
 		new Answer("Кошице", 0),
 		new Answer("Любляна", 0),
 		new Answer("Жилина", 0)
+	]),
+
+
+		new Question("Столица Сент-Китс и Невис ",
+		[
+			new Answer("Антигуа", 0),
+			new Answer("Бастер", 1),
+			new Answer("Сент-Джонс", 0),
+			new Answer("Сан-Хуан", 0)
+		]),
+
+		new Question("Столица Ливана ",
+		[
+			new Answer("Триполи", 0),
+			new Answer("Хомс", 0),
+			new Answer("Бейрут", 1),
+			new Answer("Латакья", 0)
+		]),
+
+	new Question("Столица Иордании ",
+	[
+		new Answer("Амман", 1),
+		new Answer("Бейрут", 0),
+		new Answer("Дамаск", 0),
+		new Answer("Табук", 0)
+	]),
+
+	new Question("Столица Турции ",
+	[
+		new Answer("Диярбакыр", 0),
+		new Answer("Стамбул", 0),
+		new Answer("Анкара", 1),
+		new Answer("Анталья", 0)
+	]),
+
+
+	new Question("Столица Мадагаскара ",
+	[
+		new Answer("Малави", 0),
+		new Answer("Манакара", 0),
+		new Answer("Мадагаскар", 0),
+		new Answer("Антананариву", 1)
+	]),
+
+	new Question("Столица Самоа ",
+	[
+		new Answer("Сува", 0),
+		new Answer("Напи", 0),
+		new Answer("Апиа", 1),
+		new Answer("Тонга", 0)
+	]),
+
+	new Question("Столица Эритреи ",
+	[
+		new Answer("Кассала", 0),
+		new Answer("Асмэра", 1),
+		new Answer("Накфа", 0),
+		new Answer("Митсива", 0)
 	]),
 
 	new Question("Столица Украины ",
